@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  vegaapp:
+    image: ghcr.io/jorge09829985/vega:latest
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+
+        # HTTP → HTTPS
+        - "traefik.http.routers.vegaapp.entrypoints=http"
+        - "traefik.http.routers.vegaapp.rule=Host(`vega.byronrm.com`)"
+        - "traefik.http.middlewares.vegaapp-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.vegaapp.middlewares=vegaapp-https-redirect"
+
+        # HTTPS router
+        - "traefik.http.routers.vegaapp-secure.entrypoints=https"
+        - "traefik.http.routers.vegaapp-secure.rule=Host(`vega.byronrm.com`)"
+        - "traefik.http.routers.vegaapp-secure.tls=true"
+        - "traefik.http.routers.vegaapp-secure.tls.certresolver=http"
+        - "traefik.http.routers.vegaapp-secure.service=vegaapp"
+
+        # Puerto interno del contenedor
+        - "traefik.http.services.vegaapp.loadbalancer.server.port=1003"
+
+        # Red de Traefik
+        - "traefik.docker.network=traefik-public"
+
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
