@@ -106,7 +106,7 @@ def saludo(nombre):
             </style>
         </head>
         <body>
-            <h2>Hola {nombre}, bienvenido a <strong>Jorge Escobar</strong> 🌟</h2>
+            <h2>Hola {nombre}, <strong>Jorge Escobar</strong> 🌟</h2>
             <p>Amo a Messi ❤️ y es el mejor jugador del mundo 🌍⚽ lo amooooooo</p>
             <a href="/">Volver al inicio</a>
         </body>
