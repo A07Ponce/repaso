@@ -8,11 +8,11 @@ HTML_TEMPLATE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Escobar Chevere</title>
+    <title>Alisson Ponce Chevere</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #141E30, #243B55);
+            background: linear-gradient(135deg, #6a0572, #120078);
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -33,7 +33,7 @@ HTML_TEMPLATE = """
         a {
             margin-top: 1.5rem;
             display: inline-block;
-            background: #00C9A7;
+            background: #ff6f91;
             color: #fff;
             padding: 0.8rem 1.6rem;
             border-radius: 30px;
@@ -42,9 +42,9 @@ HTML_TEMPLATE = """
             font-weight: bold;
         }
         a:hover {
-            background: #00E0BB;
+            background: #ff8fab;
             transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0, 201, 167, 0.3);
+            box-shadow: 0 8px 15px rgba(255, 143, 171, 0.3);
         }
         footer {
             position: absolute;
@@ -55,9 +55,9 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
-    <h1>Bienvenido 🚀</h1>
-    <p>Aplicación Flask diseñada por <strong>Jorge Escobar</strong></p>
-    <a href="/saludo/jorge.escobar">Ver saludo personalizado</a>
+    <h1>Bienvenida 🚀</h1>
+    <p>Aplicación Flask creada por <strong>Alisson Ponce</strong></p>
+    <a href="/saludo/alisson.ponce">Ver saludo personalizado</a>
     <footer>Powered by Flask & Traefik · 2025</footer>
 </body>
 </html>
@@ -73,10 +73,10 @@ def saludo(nombre):
     <html>
         <head>
             <meta charset='UTF-8'>
-            <title>Saludo de Jorge Escobar</title>
+            <title>Saludo de Alisson Ponce</title>
             <style>
                 body {{
-                    background: radial-gradient(circle at top left, #243B55, #141E30);
+                    background: radial-gradient(circle at top left, #120078, #6a0572);
                     color: #fff;
                     font-family: 'Segoe UI', sans-serif;
                     display: flex;
@@ -95,19 +95,19 @@ def saludo(nombre):
                     margin-bottom: 1.5rem;
                 }}
                 a {{
-                    color: #00E0BB;
+                    color: #ff8fab;
                     text-decoration: none;
                     font-weight: bold;
                     transition: 0.3s ease;
                 }}
                 a:hover {{
-                    text-shadow: 0 0 10px #00E0BB;
+                    text-shadow: 0 0 10px #ff8fab;
                 }}
             </style>
         </head>
         <body>
-            <h2>Hola {nombre}, <strong>Jorge Escobar</strong> 🌟</h2>
-            <p>Amo a Messi ❤️ y es el mejor jugador del mundo 🌍⚽ lo amooooooo</p>
+            <h2>Hola {nombre}, <strong>Alisson Ponce</strong> 🌟</h2>
+            <p>Bienvenida a tu app Flask con estilo 😎🚀</p>
             <a href="/">Volver al inicio</a>
         </body>
     </html>

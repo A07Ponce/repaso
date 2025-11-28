@@ -9,17 +9,17 @@ def test_home():
 
     # El HTML incluye "Bienvenido 🚀"
     assert b"Bienvenido" in res.data
-    assert b"Jorge Escobar" in res.data
+    assert b"alisson ponce" in res.data
 
 def test_saludo():
     client = app.test_client()
-    nombre = "jorge.escobar"
+    nombre = "alisson ponce"
     res = client.get(f"/saludo/{nombre}")
 
     # Código 200 OK
     assert res.status_code == 200
 
     # Validar contenido dinámico
-    assert b"Hola jorge.escobar" in res.data
+    assert b"hola alisson ponce" in res.data
     assert b"Messi" in res.data  # Está en tu HTML
     assert b"Volver al inicio" in res.data

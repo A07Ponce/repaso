@@ -3,7 +3,7 @@ name: 🐍 Build & Push Flask App
 on:
   push:
     branches:
-      - vega
+      - suntaxi
   pull_request:
 
 permissions:
@@ -21,7 +21,7 @@ jobs:
       - name: 🐍 Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: 📚 Install dependencies
         run: |
@@ -44,10 +44,10 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/jorge09829985/vega:latest
+            ghcr.io/A07Ponce/suntaxi:latest
 
       - name: ✅ Verify image build
-        run: docker images ghcr.io/jorge09829985/vega:latest
+        run: docker images ghcr.io/A07Ponce/suntaxi:latest
 
       - name: 🧾 Mostrar variables básicas (solo locales, no secretos)
         run: |
@@ -87,10 +87,10 @@ jobs:
           port: ${{ secrets.VPS_SSH_PORT }}
           script: |
             echo "==> Autenticando en GHCR"
-            echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u jorge09829985 --password-stdin
+            echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u A07Ponce --password-stdin
 
             echo "==> Descargando imagen del GHCR"
-            docker pull ghcr.io/jorge09829985/vega:latest
+            docker pull ghcr.io/A07Ponce/suntaxi:latest
 
             echo "==> Eliminando stack anterior"
             docker stack rm vega || true

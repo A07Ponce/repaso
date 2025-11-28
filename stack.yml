@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   vegaapp:
-    image: ghcr.io/jorge09829985/vega:latest
+    image: ghcr.io/A07Ponce/suntaxi:latest
     deploy:
       replicas: 1
       labels:
