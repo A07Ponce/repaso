@@ -7,9 +7,10 @@ def test_home():
     # Código 200 OK
     assert res.status_code == 200
 
-    # El HTML incluye "Bienvenido 🚀"
+    # Validar contenido del HTML
     assert b"Bienvenido" in res.data
-    assert b"alisson ponce" in res.data
+    assert b"alisson ponce" in res.data  # TU NOMBRE
+
 
 def test_saludo():
     client = app.test_client()
@@ -21,5 +22,5 @@ def test_saludo():
 
     # Validar contenido dinámico
     assert b"hola alisson ponce" in res.data
-    assert b"Messi" in res.data  # Está en tu HTML
+    assert b"Messi" in res.data       # si está en tu HTML
     assert b"Volver al inicio" in res.data
