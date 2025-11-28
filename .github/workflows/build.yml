@@ -93,8 +93,9 @@ jobs:
             docker pull ghcr.io/A07Ponce/suntaxi:latest
 
             echo "==> Eliminando stack anterior"
-            docker stack rm vega || true
+            docker stack rm suntaxi || true
             sleep 25
 
             echo "==> Desplegando nuevo stack"
-            docker stack deploy -c /home/${{ secrets.VPS_USER }}/despliegue/stack.yml --with-registry-auth vega
+            docker stack deploy -c /home/${{ secrets.VPS_USER }}/despliegue/stack.yml --with-registry-auth suntaxi
+
