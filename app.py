@@ -100,18 +100,4 @@ def saludo(nombre):
                     font-weight: bold;
                     transition: 0.3s ease;
                 }}
-                a:hover {{
-                    text-shadow: 0 0 10px #ff8fab;
-                }}
-            </style>
-        </head>
-        <body>
-            <h2>Hola {nombre}, <strong>Alisson Ponce</strong> 🌟</h2>
-            <p>Bienvenida a tu app Flask con estilo 😎🚀</p>
-            <a href="/">Volver al inicio</a>
-        </body>
-    </html>
-    """
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=1003)
+                a:hover
