@@ -55,9 +55,9 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
-    <h1>Bienvenida 🚀</h1>
-    <p>Aplicación Flask creada por <strong>Alisson Ponce</strong></p>
-    <a href="/saludo/alisson.ponce">Ver saludo personalizado</a>
+    <h1>Bienvenido 🚀</h1>
+    <p>Aplicación Flask creada por <strong>alisson ponce</strong></p>
+    <a href="/saludo/alisson ponce">Ver saludo personalizado</a>
     <footer>Powered by Flask & Traefik · 2025</footer>
 </body>
 </html>
@@ -100,4 +100,18 @@ def saludo(nombre):
                     font-weight: bold;
                     transition: 0.3s ease;
                 }}
-                a:hover
+                a:hover {{
+                    text-shadow: 0 0 10px #ff8fab;
+                }}
+            </style>
+        </head>
+        <body>
+            <h2>hola {nombre}</h2>
+            <p>Messi es el mejor del mundo ❤️⚽</p>
+            <a href="/">Volver al inicio</a>
+        </body>
+    </html>
+    """
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=1003)
